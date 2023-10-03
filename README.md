@@ -88,7 +88,7 @@ jobs:
 ```
 
 > **Important**
-> MAKE SURE YOU REPLACE `YOUR-PLUGIN-NAME` WITH THE NAME OF YOUR PLUGIN!
+> Make sure you replace `your-plugin-name` with the name of your plugin!
 
 Afterwards, run:
 - `git add .github/`
