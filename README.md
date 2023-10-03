@@ -12,7 +12,7 @@ My favourite quote from the blog:
 
 # Getting Started
 
-Pushing your Neovim plugin to luarocks is a very simple process.
+Pushing your Neovim plugin to luarocks is a very simple process, so let's get going!
 
 ## Setting up a Luarocks Account
 
@@ -59,7 +59,7 @@ a tool that automates the semver process. All you do is write commits in the [co
 style (for example `fix: annoying bug` or `feat(ui): add new buttons`) and release-please generates a new release
 version in the form of a pull request to your repository.
 
-> **Important**
+> **Note**
 > The pull request made by the Github action gets updated on every new commit that you make - this means you control
   when a new version of your plugin is published by **merging the pull request**.
 >
@@ -87,7 +87,7 @@ jobs:
           package-name: YOUR-PLUGIN-NAME
 ```
 
-> **Note**
+> **Important**
 > MAKE SURE YOU REPLACE `YOUR-PLUGIN-NAME` WITH THE NAME OF YOUR PLUGIN!
 
 Afterwards, run:
@@ -104,7 +104,7 @@ you'll just need to run an extra command later in the tutorial.
 After your repository has a working versioning scheme we may now move on to actually publishing our plugin to luarocks.
 
 It is recommended that your repository has as much metadata as possible (a license that is detected by github on the right side
-of your plugin's page, a repo title/description etc.) in your Github repository.
+of your plugin's page, a repo title/description, github topics etc.) in your Github repository.
 
 Time to add our API key!
 
