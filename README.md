@@ -76,6 +76,10 @@ on:
       - main
   workflow_dispatch:
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   release:
     name: release
@@ -83,6 +87,7 @@ jobs:
     steps:
       - uses: google-github-actions/release-please-action@v3
         with:
+          token: ${{ secrets.PAT }}
           release-type: simple
           package-name: YOUR-PLUGIN-NAME
 ```
