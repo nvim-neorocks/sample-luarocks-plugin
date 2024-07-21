@@ -83,9 +83,6 @@ jobs:
           release-type: simple
 ```
 
-> [!IMPORTANT]
-> Make sure you replace `YOUR-PLUGIN-NAME` with the name of your plugin!
-
 ### Generating a PAT (Personal Access Token)
 
 Because of Github we must generate a personal access token for our account (this will allow the luarocks workflow to be triggered
