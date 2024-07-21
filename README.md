@@ -65,6 +65,7 @@ on:
   push:
     branches:
       - main
+      - master
   workflow_dispatch:
 
 permissions:
@@ -76,11 +77,10 @@ jobs:
     name: release
     runs-on: ubuntu-latest
     steps:
-      - uses: google-github-actions/release-please-action@v3
+      - uses: googleapis/release-please-action@v4
         with:
           token: ${{ secrets.PAT }}
           release-type: simple
-          package-name: YOUR-PLUGIN-NAME
 ```
 
 > [!IMPORTANT]
