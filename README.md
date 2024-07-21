@@ -45,7 +45,7 @@ do it for us.
 
 ## Installing Release-Please (recommended)
 
-Because of the way we'll be setting up the workflow later on, it is recommended that you install [`release-please`](https://github.com/google-github-actions/release-please-action),
+Because of the way we'll be setting up the workflow later on, it is recommended that you install [`release-please`](https://github.com/googleapis/release-please-action),
 a tool that automates the semver process. All you do is write commits in the [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
 style (for example `fix: annoying bug` or `feat(ui): add new buttons`) and release-please generates a new release
 version in the form of a pull request to your repository.
