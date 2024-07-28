@@ -172,9 +172,9 @@ jobs:
   luarocks-upload:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: LuaRocks Upload
-        uses: nvim-neorocks/luarocks-tag-release@v5
+        uses: nvim-neorocks/luarocks-tag-release@v7
         env:
           LUAROCKS_API_KEY: ${{ secrets.LUAROCKS_API_KEY }}
 ```
