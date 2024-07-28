@@ -177,6 +177,38 @@ jobs:
         uses: nvim-neorocks/luarocks-tag-release@v7
         env:
           LUAROCKS_API_KEY: ${{ secrets.LUAROCKS_API_KEY }}
+        with:
+          # Optional: You can specify dependencies, etc. here
+          dependencies: |
+            plenary.nvim
+            foo.nvim
+```
+
+If your plugin depends on a tree-sitter parser, you should add the tools
+required to build the parser to your workflow so that luarocks-tag-release can test
+the installation of your package before uploading.
+
+Example:
+
+```yaml
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install C/C++ Compiler
+        uses: rlalik/setup-cpp-compiler@master
+        with:
+          compiler: clang-latest
+      # Required to build tree-sitter parsers
+      - name: Install tree-sitter CLI
+        uses: baptiste0928/cargo-install@v3
+        with:
+          crate: tree-sitter-cli
+      - name: LuaRocks Upload
+        uses: nvim-neorocks/luarocks-tag-release@v7
+        env:
+          LUAROCKS_API_KEY: ${{ secrets.LUAROCKS_API_KEY }}
+        with:
+          dependencies: |
+            tree-sitter-rust
 ```
 
 Afterwards, run:
